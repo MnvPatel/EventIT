@@ -81,7 +81,7 @@ let sendMessage = async(e) => {
 }
 
 let addMessageToDom = (name, message) => {
-    let messageWrapper = document.getElementById('messages')
+    let messagesWrapper = document.getElementById('messages')
 
     let newMessage = `<div class="message__wrapper">
                         <div class="message__body">
@@ -90,7 +90,7 @@ let addMessageToDom = (name, message) => {
                         </div>
                     </div>`
 
-    messageWrapper.insertAdjacentHTML("beforeend", newMessage)
+    messagesWrapper.insertAdjacentHTML('beforeend', newMessage)
 
     let lastMessage = document.querySelector('#messages .message__wrapper:last-child')
     if(lastMessage){
